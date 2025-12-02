@@ -1,90 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Website</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Unnati — Knowledge Hub</title>
+  <style>
+    /* Simple UN-like clean stylesheet */
+    :root{--blue:#0052a5;--light:#f5f9fc;--dark:#0b2540}
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;margin:0;color:var(--dark);background:var(--light)}
+    header{background:linear-gradient(180deg,var(--blue),#0570c9);color:white;padding:18px 24px}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .nav-left{display:flex;gap:18px;align-items:center}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:44px}
+    .nav-links a{color:white;text-decoration:none;margin-left:14px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start;padding:40px 0}
+    .hero h1{font-size:32px;margin:0 0 12px}
+    .hero p{margin:0 0 18px;line-height:1.5}
+    .card{background:white;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(11,37,64,0.06)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .section{margin:36px 0}
+    h2{margin:0 0 12px}
+    .branches ul{list-style:none;padding:0;margin:0}
+    .branches li{padding:8px 0;border-bottom:1px solid #eef6ff}
+    footer{background:#0c3358;color:#e6f2ff;padding:26px 24px}
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(1,1fr)}
+    }
+    /* simple button */
+    .btn{display:inline-block;background:var(--blue);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .muted{color:#4b6b88}
+  </style>
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header-container">
-
-      <div class="logo"><img src="logo-2ac21394a0a0f54f0971881bea24caa8-removebg-preview.png"></div>
-
-      <nav class="nav-links">
-        <a href="#" class="join-btn">Home</a>
-        <a href="#" class="join-btn">Articles</a>
-        <a href="#" class="join-btn">About</a>
-        <a href="#" class="join-btn">Branches</a>
-        <a href="#" class="join-btn">Events</a>
-        <a href="#" class="join-btn">Upcoming</a>
-        <a href="#" class="join_1-btn">Join</a>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="nav-left">
+          <div class="logo">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='44'><rect width='44' height='44' rx='6' fill='%23ffffff'/><text x='50%25' y='55%25' font-size='18' text-anchor='middle' fill='%230052a5' font-family='Arial' font-weight='700'>U</text></svg>" alt="Unnati logo">
+            <div>
+              <div style="font-weight:700">Unnati</div>
+              <small style="font-size:12px;color:rgba(255,255,255,0.9)">The Knowledge Hub for Civil Aspirants</small>
+            </div>
+          </div>
+          <div class="nav-links" style="margin-left:26px">
+            <a href="#home">Home</a>
+            <a href="#articles">Articles</a>
+            <a href="#events">Events</a>
+            <a href="#about">About</a>
+          </div>
+        </div>
+        <div>
+          <a class="btn" href="#join">Join</a>
+        </div>
       </nav>
-
-      <!-- Hamburger -->
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#">Home</a>
-      <a href="#">Articles</a>
-      <a href="#">About</a>
-      <a href="#">Branches</a>
-      <a href="#">Events</a>
-      <a href="#">Upcoming</a>
-      <a href="#" class="join-btn">Join</a>
     </div>
   </header>
 
+  <main class="container" id="home">
+    <section class="hero">
+      <div>
+        <h1>Unnati — The Knowledge Hub For Civil Aspirants</h1>
+        <p class="muted">A not-for-profit organisation providing free guidance and resources for UPSC and other civil services aspirants. Founded to uplift talented youth who lack adequate resources.</p>
+        <p><a class="btn" href="#articles">Read Articles</a></p>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-container">
+        <div class="section">
+          <div class="card">
+            <h2>About Unnati</h2>
+            <p class="muted">Unnati was started to provide guidance, host events, and run programs that build knowledge and exam readiness. It organizes initiatives such as Uthan (Youth Parliament), Udyat (education outreach) and the Unnati Times (monthly youth newspaper).</p>
+            <p style="margin-top:12px"><a href="#about">Read more →</a></p>
+          </div>
+        </div>
 
-      <div class="footer-section">
-        <h2 class="footer-title">Unnati Foundation</h2>
-        <p class="footer-text">
-          Empowering UPSC aspirants with guidance, resources and mentorship.
-        </p>
+        <div class="section">
+          <h2>Latest Articles</h2>
+          <div class="grid" id="articles">
+            <div class="card">
+              <h3>Strategy for Current Affairs</h3>
+              <p class="muted">How to approach monthly current affairs, note-making and revision for civil services preparation.</p>
+              <p><a href="#" style="font-weight:600">Read →</a></p>
+            </div>
+            <div class="card">
+              <h3>Essay Writing Tips</h3>
+              <p class="muted">Practical techniques to structure essays and improve answer-writing under time pressure.</p>
+              <p><a href="#" style="font-weight:600">Read →</a></p>
+            </div>
+            <div class="card">
+              <h3>Interview Preparation</h3>
+              <p class="muted">Mock interview formats and common pitfalls to avoid during the personality test.</p>
+              <p><a href="#" style="font-weight:600">Read →</a></p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-section">
-        <h3 class="footer-heading">Quick Links</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Articles</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Join Us</a></li>
-        </ul>
+      <aside>
+        <div class="card">
+          <h3>Upcoming Events</h3>
+          <p class="muted">Significant workshops and youth parliament dates, with details on registration and participation.</p>
+          <ul style="padding-left:16px;margin-top:12px;color:#12345a">
+            <li><strong>Uthan Youth Parliament —</strong> National edition, registration open.</li>
+            <li><strong>Unnati Workshop —</strong> Essay & answer writing bootcamp.</li>
+            <li><strong>Volunteer Drive —</strong> Join Udyat teaching volunteers.</li>
+          </ul>
+          <p style="margin-top:12px"><a class="btn" href="#events">See all events</a></p>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <h3>Associate With Unnati</h3>
+          <form id="contact" onsubmit="event.preventDefault();alert('Form submitted (demo)')">
+            <label style="font-size:13px;display:block;margin-bottom:6px">Name</label>
+            <input type="text" placeholder="Your name" style="width:100%;padding:8px;margin-bottom:8px;border-radius:6px;border:1px solid #e6f0fb">
+            <label style="font-size:13px;display:block;margin-bottom:6px">Email</label>
+            <input type="email" placeholder="you@example.com" style="width:100%;padding:8px;margin-bottom:8px;border-radius:6px;border:1px solid #e6f0fb">
+            <label style="font-size:13px;display:block;margin-bottom:6px">Message</label>
+            <textarea placeholder="How would you like to collaborate?" style="width:100%;padding:8px;border-radius:6px;border:1px solid #e6f0fb"></textarea>
+            <div style="margin-top:10px"><button class="btn" type="submit">Send</button></div>
+          </form>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section card" id="about">
+      <h2>About — Mission & History</h2>
+      <p class="muted">Unnati is registered as a not-for-profit organisation focused on educating and empowering youth. It began in December 2016 and runs programs to widen access to education and test-prep resources.</p>
+      <div style="margin-top:12px">
+        <h3>Our Branches</h3>
+        <div class="branches">
+          <ul>
+            <li><strong>Uthan</strong> — A youth parliament that simulates parliamentary debates and policy discussion.</li>
+            <li><strong>Unnati Times</strong> — A youth-led monthly newspaper covering news, quizzes, interviews and features.</li>
+            <li><strong>Udyat</strong> — Outreach program focused on teaching and mentoring children in under-served communities.</li>
+          </ul>
+        </div>
       </div>
+    </section>
 
-      <div class="footer-section">
-        <h3 class="footer-heading">Contact</h3>
-        <p>✉️ upsc.cell.du@gmail.com</p>
+    <section class="section">
+      <div class="card">
+        <h2 id="events">Events & Programs</h2>
+        <p class="muted">We host workshops, mock interviews, youth parliaments and community outreach programs. Events are announced on this page with registration details and schedules.</p>
+        <div style="margin-top:14px">
+          <article style="padding:12px 0;border-top:1px solid #eef6ff">
+            <h4>Uthan — Youth Parliament</h4>
+            <p class="muted">An international-level youth parliament to create awareness about parliamentary working and public speaking.</p>
+          </article>
+          <article style="padding:12px 0;border-top:1px solid #eef6ff">
+            <h4>Volunteer Drive — Udyat</h4>
+            <p class="muted">Volunteers teach elementary curriculum and skills to young children in adopted communities.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
-    </div>
+  </main>
 
-    <div class="footer-bottom">
-      © 2025 Unnati Foundation. All rights reserved.
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>
+          <strong>Unnati</strong>
+          <div style="font-size:13px">Registered Not-for-Profit • Founded 2016</div>
+        </div>
+        <div style="font-size:14px">Follow us • <a href="#" style="color:#e6f2ff">Twitter</a> • <a href="#" style="color:#e6f2ff">Instagram</a></div>
+      </div>
     </div>
   </footer>
-
-
-<script>
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-
-hamburger.addEventListener("click", () => {
-  mobileMenu.classList.toggle("open");
-});
-</script>
 
 </body>
 </html>
