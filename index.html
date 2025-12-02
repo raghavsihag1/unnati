@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Website</title>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+
+      <div class="logo"><img src="logo-2ac21394a0a0f54f0971881bea24caa8-removebg-preview.png"></div>
+
+      <nav class="nav-links">
+        <a href="#" class="join-btn">Home</a>
+        <a href="#" class="join-btn">Articles</a>
+        <a href="#" class="join-btn">About</a>
+        <a href="#" class="join-btn">Branches</a>
+        <a href="#" class="join-btn">Events</a>
+        <a href="#" class="join-btn">Upcoming</a>
+        <a href="#" class="join_1-btn">Join</a>
+      </nav>
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#">Home</a>
+      <a href="#">Articles</a>
+      <a href="#">About</a>
+      <a href="#">Branches</a>
+      <a href="#">Events</a>
+      <a href="#">Upcoming</a>
+      <a href="#" class="join-btn">Join</a>
+    </div>
+  </header>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-section">
+        <h2 class="footer-title">Unnati Foundation</h2>
+        <p class="footer-text">
+          Empowering UPSC aspirants with guidance, resources and mentorship.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-heading">Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Join Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-heading">Contact</h3>
+        <p>✉️ upsc.cell.du@gmail.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Unnati Foundation. All rights reserved.
+    </div>
+  </footer>
+
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("open");
+});
+</script>
+
+</body>
+</html>
