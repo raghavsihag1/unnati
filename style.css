@@ -1,0 +1,28 @@
+  :root{--blue:#0052a5;--light:#f5f9fc;--dark:#0b2540}
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;margin:0;color:var(--dark);background:var(--light)}
+    header{background:linear-gradient(180deg,var(--blue),#0570c9);color:white;padding:18px 24px}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .nav-left{display:flex;gap:18px;align-items:center}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:44px}
+    .nav-links a{color:white;text-decoration:none;margin-left:14px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start;padding:40px 0}
+    .hero h1{font-size:32px;margin:0 0 12px}
+    .hero p{margin:0 0 18px;line-height:1.5}
+    .card{background:white;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(11,37,64,0.06)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .section{margin:36px 0}
+    h2{margin:0 0 12px}
+    .branches ul{list-style:none;padding:0;margin:0}
+    .branches li{padding:8px 0;border-bottom:1px solid #eef6ff}
+    footer{background:#0c3358;color:#e6f2ff;padding:26px 24px}
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(1,1fr)}
+    }
+    /* simple button */
+    .btn{display:inline-block;background:var(--blue);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .muted{color:#4b6b88}
