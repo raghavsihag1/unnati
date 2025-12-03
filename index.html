@@ -88,16 +88,28 @@
 
         <div class="card">
           <h3>Associate With Unnati</h3>
-          <form action="form-process.php" method="POST" id="contact" onsubmit="event.preventDefault();alert('Form submitted (demo)')>
+          <form action="form-process.php" method="POST" id="contact">
           
-            <label style="font-size:13px;display:block;margin-bottom:6px">Name</label>
-            <input type="text" name="fullName" placeholder="Your name" style="width:100%;padding:8px;margin-bottom:8px;border-radius:6px;border:1px solid #e6f0fb" requiered/>
-            <label style="font-size:13px;display:block;margin-bottom:6px">Email</label>
-            <input type="email" name="email" placeholder="you@example.com" style="width:100%;padding:8px;margin-bottom:8px;border-radius:6px;border:1px solid #e6f0fb" requiered/>
-            <label style="font-size:13px;display:block;margin-bottom:6px">Message</label>
-            <textarea placeholder="How would you like to collaborate?" name="message" style="width:100%;padding:8px;border-radius:6px;border:1px solid #e6f0fb" requiered/></textarea>
-            <div style="margin-top:10px"><button class="btn" type="submit">Send</button></div>
-          </form>
+    <label style="font-size:13px; display:block; margin-bottom:6px;">Name</label>
+    <input type="text" name="fullName" placeholder="Your name"
+           style="width:100%; padding:8px; margin-bottom:8px; border-radius:6px; border:1px solid #e6f0fb;"
+           required />
+
+    <label style="font-size:13px; display:block; margin-bottom:6px;">Email</label>
+    <input type="email" name="email" placeholder="you@example.com"
+           style="width:100%; padding:8px; margin-bottom:8px; border-radius:6px; border:1px solid #e6f0fb;"
+           required />
+
+    <label style="font-size:13px; display:block; margin-bottom:6px;">Message</label>
+    <textarea name="message" placeholder="How would you like to collaborate?"
+              style="width:100%; padding:8px; border-radius:6px; border:1px solid #e6f0fb;"
+              required></textarea>
+
+    <div style="margin-top:10px;">
+        <button class="btn" type="submit">Send</button>
+    </div>
+</form>
+
         </div>
       </aside>
     </section>
