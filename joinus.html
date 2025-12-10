@@ -1,243 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Unnati</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* --- General Reset & Fonts --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f0f4f8;
-            color: #333;
-            min-height: 100vh;
-        }
-
-        /* --- Navigation Bar (Same as before) --- */
-        .navbar {
-            background-color: #3468b1;
-            color: white;
-            padding: 15px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand-section {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-icon {
-            font-size: 28px;
-            color: #dcb348;
-        }
-
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .brand-title {
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 1.2;
-        }
-
-        .brand-subtitle {
-            font-size: 11px;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            transition: opacity 0.2s;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-
-        .btn-join {
-            background-color: #1a428a;
-            color: white;
-            text-decoration: none;
-            padding: 8px 24px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 14px;
-        }
-
-        /* --- NEW LAYOUT STYLES --- */
-        
-        /* Centered container with a max-width for readability */
-        .main-wrapper {
-            max-width: 900px; 
-            margin: 60px auto;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: column; /* Stack items vertically */
-            gap: 40px; /* Space between title and card */
-        }
-
-        /* Header Text Area */
-        .hero-text {
-            text-align: center; /* Center align the main title */
-        }
-
-        .hero-text h1 {
-            color: #0f1826;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .hero-text p {
-            color: #5d6d82;
-            font-size: 1.3rem;
-            line-height: 1.5;
-            max-width: 700px;
-            margin: 0 auto; /* Center the paragraph */
-        }
-
-        /* The Program Section (Formerly the card) */
-        .program-card {
-            background-color: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            width: 100%; /* Takes full width of container */
-        }
-
-        .card-header {
-            background-color: #d68a32;
-            padding: 30px 40px;
-            color: white;
-        }
-
-        .card-header h2 {
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .card-header p {
-            font-size: 16px;
-            opacity: 0.95;
-            font-weight: 400;
-        }
-
-        .card-body {
-            padding: 40px;
-        }
-
-        .section-title {
-            color: #0f1826;
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #f0f4f8; /* Added a subtle line */
-            padding-bottom: 10px;
-        }
-
-        .description-text {
-            color: #5d6d82;
-            font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
-
-        /* Benefits Grid - Now 3 Columns for wider layout */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 Columns */
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .benefit-item {
-            display: flex;
-            align-items: center; /* Vertically center icon */
-            gap: 12px;
-            color: #0f1826;
-            font-size: 15px;
-            font-weight: 500;
-            background-color: #f8fafc; /* Slight background for items */
-            padding: 15px;
-            border-radius: 6px;
-        }
-
-        .benefit-item i {
-            color: #3d8a40;
-            font-size: 18px;
-        }
-
-        .bottom-header {
-            color: #0f1826;
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .hero-text h1 { font-size: 2.2rem; }
-            .hero-text p { font-size: 1.1rem; }
-            
-            .benefits-grid {
-                grid-template-columns: 1fr; /* Stack benefits on mobile */
-            }
-            
-            .card-body { padding: 20px; }
-            .card-header { padding: 25px; }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Join Unnati</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="brand-section">
-                <i class="logo"></i>
-                <div class="brand-text">
-                    <span class="brand-title">Unnati Foundation</span>
-                    <span class="brand-subtitle">The knowledge hub for civil aspirants.</span>
-                </div>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="nav-left">
+          <div class="logo">
+            <img src="logo.png" width='44' height='44' alt="Unnati Logo">
+            <div>
+              <div style="font-weight:700">Unnati Foundation</div>
+              <small style="font-size:12px;color:rgba(255,255,255,0.9)">The knowledge hub for civil aspirants.</small>
             </div>
-            <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
-            </ul>
+          </div>
+          <div class="nav-links" style="margin-left:26px">
+            <a href="index.html">Home</a>
+            <a href="index.html#articles">Articles</a>
+            <a href="about/about.html">About</a>
+            <a href="index.html#branches">Branches</a>
+            <a href="events.html">Events</a>
+          </div>
         </div>
-    </nav>
+        <div>
+          <a class="btn" href="joinus.html">Join</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-    <main class="main-wrapper">
+  <main class="container">
+    <div class="join-wrapper">
         
-        <div class="hero-text">
+        <div class="join-hero">
             <h1>Join Unnati</h1>
             <p>Be part of a movement that's empowering the next generation of civil servants.</p>
         </div>
@@ -280,7 +81,20 @@
             </div>
         </div>
 
-    </main>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>
+          <strong>Unnati</strong>
+          <div style="font-size:13px">Registered Not-for-Profit • Founded 2016</div>
+        </div>
+        <div style="font-size:14px">Follow us • <a href="#" style="color:#e6f2ff">X</a> • <a href="#" style="color:#e6f2ff">Instagram</a></div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
