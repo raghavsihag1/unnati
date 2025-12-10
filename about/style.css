@@ -168,3 +168,87 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- Extra Styles for About Page --- */
+
+.team-avatar {
+  width: 60px;
+  height: 60px;
+  background: #eef6ff;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--blue);
+  font-size: 20px;
+}
+
+.achievement-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 600px) {
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Scrolling Marquee Styles --- */
+
+/* The fixed-height window that hides overflow */
+.marquee-window {
+    height: 350px; /* Adjust height as preferred */
+    overflow: hidden;
+    position: relative;
+    background: #f8fbfe; /* Slightly different background for contrast */
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #eef6ff;
+}
+
+/* The container actually moving */
+.marquee-content {
+    /* Animation: name | duration | timing-function | iteration-count */
+    animation: scrollUp 60s linear infinite;
+}
+
+/* Pause animation on hover for better readability */
+.marquee-window:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* Styling individual patron items in the list */
+.patron-item {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6f0fb;
+}
+
+.patron-item:last-child {
+    border-bottom: none;
+}
+
+.patron-item strong {
+    display: block;
+    font-size: 14px;
+    color: var(--dark);
+}
+
+.patron-item small {
+    color: #4b6b88; /* Muted color */
+    font-size: 12px;
+}
+
+/* The animation definition */
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        /* Move up by exactly 50% because the list is duplicated. 
+           This creates a seamless loop. */
+        transform: translateY(-50%);
+    }
+}
