@@ -1,4 +1,187 @@
+:root {
+  --blue: #0052a5;
+  --light: #f5f9fc;
+  --dark: #0b2540;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+  margin: 0;
+  color: var(--dark);
+  background: var(--light);
+}
+
+header {
+  background: linear-gradient(180deg, var(--blue), #0570c9);
+  color: white;
+  padding: 18px 24px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
 /* --- Extra Styles for About Page --- */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.logo {
+.team-avatar {
+  width: 60px;
+  height: 60px;
+  background: #eef6ff;
+  border-radius: 50%;
+  margin-bottom: 12px;
+display: flex;
+align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 44px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 14px;
+  font-weight: 600;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items: start;
+  padding: 40px 0;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin: 0 0 12px;
+}
+
+.hero p {
+  margin: 0 0 18px;
+  line-height: 1.5;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(11, 37, 64, 0.06);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.section {
+  margin: 36px 0;
+}
+
+h2 {
+  margin: 0 0 12px;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--blue);
+  font-size: 20px;
+}
+
+h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+.achievement-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.branches ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+@media (max-width: 600px) {
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.branches li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eef6ff;
+}
+/* --- Scrolling Marquee Styles --- */
+
+footer {
+  background: #0c3358;
+  color: #e6f2ff;
+  padding: 26px 24px;
+/* The fixed-height window that hides overflow */
+.marquee-window {
+    height: 350px; /* Adjust height as preferred */
+    overflow: hidden;
+    position: relative;
+    background: #f8fbfe; /* Slightly different background for contrast */
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #eef6ff;
+}
+
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+/* The container actually moving */
+.marquee-content {
+    /* Animation: name | duration | timing-function | iteration-count */
+    animation: scrollUp 60s linear infinite;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+/* Pause animation on hover for better readability */
+.marquee-window:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+.muted {
+  color: #4b6b88;
+/* Styling individual patron items in the list */
+.patron-item {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6f0fb;
+}
+
+
 
 .team-avatar {
   width: 60px;
@@ -12,72 +195,41 @@
   font-weight: bold;
   color: var(--blue);
   font-size: 20px;
-}
-
-.achievement-grid {
-    grid-template-columns: 1fr 1fr;
-}
-
-@media (max-width: 600px) {
-    .achievement-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* --- Scrolling Marquee Styles --- */
-
-/* The fixed-height window that hides overflow */
-.marquee-window {
-    height: 350px; /* Adjust height as preferred */
-    overflow: hidden;
-    position: relative;
-    background: #f8fbfe; /* Slightly different background for contrast */
-    border-radius: 8px;
-    padding: 12px;
-    border: 1px solid #eef6ff;
-}
-
-/* The container actually moving */
-.marquee-content {
-    /* Animation: name | duration | timing-function | iteration-count */
-    animation: scrollUp 60s linear infinite;
-}
-
-/* Pause animation on hover for better readability */
-.marquee-window:hover .marquee-content {
-    animation-play-state: paused;
-}
-
-/* Styling individual patron items in the list */
-.patron-item {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e6f0fb;
-}
-
 .patron-item:last-child {
     border-bottom: none;
 }
 
+.achievement-grid {
+    grid-template-columns: 1fr 1fr;
 .patron-item strong {
     display: block;
     font-size: 14px;
     color: var(--dark);
 }
 
+.patrons-grid {
+    grid-template-columns: repeat(4, 1fr);
 .patron-item small {
     color: #4b6b88; /* Muted color */
     font-size: 12px;
 }
 
+@media (max-width: 1000px) {
+    .patrons-grid {
+        grid-template-columns: repeat(2, 1fr);
 /* The animation definition */
 @keyframes scrollUp {
     0% {
         transform: translateY(0%);
-    }
+}
+}
+
+@media (max-width: 600px) {
+    .patrons-grid {
+        grid-template-columns: 1fr;
     100% {
         /* Move up by exactly 50% because the list is duplicated. 
            This creates a seamless loop. */
         transform: translateY(-50%);
-    }
+}
 }
