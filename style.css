@@ -26,3 +26,22 @@
     /* simple button */
     .btn{display:inline-block;background:var(--blue);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
     .muted{color:#4b6b88}
+
+.event-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eef6ff;
+}
+
+.event-item strong {
+    display: block;
+    font-size: 14px;
+    color: var(--blue); /* Highlight event name in blue */
+    margin-bottom: 2px;
+}
+
+.event-item small {
+    color: #4b6b88;
+    font-size: 12px;
+    line-height: 1.4;
+    display: block;
+}
