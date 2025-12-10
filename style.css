@@ -283,7 +283,7 @@ footer {
   
   /* --- SIZE CONTROLS --- */
   width: 600px;
-  max-width: 90%;
+  max-width: 100%;
   /* Removed overflow: auto to allow close button to float outside */
   
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
