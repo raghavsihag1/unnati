@@ -262,17 +262,19 @@ footer {
 
 /* --- Popup Modal Styles --- */
 
+/* --- Popup Modal Styles --- */
+
 .popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  z-index: 9999; /* Ensure it sits on top of everything */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
 .popup-content {
@@ -281,10 +283,10 @@ footer {
   border-radius: 8px;
   position: relative;
   
-  /* --- SIZE CONTROLS --- */
-  width: 600px;
-  max-width: 100%;
-  /* Removed overflow: auto to allow close button to float outside */
+  /* --- CHANGED HERE --- */
+  width: auto;          /* Let the content decide the width */
+  max-width: 90%;       /* Don't go wider than the screen */
+  display: inline-block; /* Wraps the container tightly around the image */
   
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
   animation: popIn 0.3s ease-out;
@@ -292,10 +294,11 @@ footer {
 
 .popup-img {
   display: block;
+  /* Ensure image fits vertically within the screen */
+  max-height: 85vh; 
+  /* Ensure width adjusts automatically to keep aspect ratio */
+  width: auto; 
   max-width: 100%;
-  /* Limits height to viewport height so it fits without scrolling */
-  max-height: 80vh; 
-  height: auto;
   border-radius: 4px;
 }
 
@@ -311,7 +314,7 @@ footer {
   height: 30px;
   border-radius: 50%;
   text-align: center;
-  line-height: 26px; /* Adjusted to center the 'x' vertically */
+  line-height: 26px;
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
@@ -324,7 +327,6 @@ footer {
   background: var(--dark);
 }
 
-/* Animation Keyframes */
 @keyframes popIn {
   from { opacity: 0; transform: scale(0.8); }
   to { opacity: 1; transform: scale(1); }
