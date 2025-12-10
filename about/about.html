@@ -1,83 +1,208 @@
-/* --- Extra Styles for About Page --- */
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us | Unnati</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="nav-left">
+          <div class="logo">
+            <img src="logo.png" alt="Unnati Logo" width="44" height="44">
+            <div>
+              <div style="font-weight:700">Unnati Foundation</div>
+              <small style="font-size:12px;color:rgba(255,255,255,0.9)">The knowledge hub for civil aspirants.</small>
+            </div>
+          </div>
+          <div class="nav-links" style="margin-left:26px">
+            <a href="index.html">Home</a>
+            <a href="#articles">Articles</a>
+            <a href="about.html">About</a>
+             <a href="#branches">Branches</a>
+            <a href="#events">Events</a>
+             <a href="#upcoming">Upcoming</a>
+          </div>
+        </div>
+        <div>
+          <a class="btn" href="#join">Join</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-.team-avatar {
-  width: 60px;
-  height: 60px;
-  background: #eef6ff;
-  border-radius: 50%;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: var(--blue);
-  font-size: 20px;
-}
+  <main class="container">
+    <section class="hero">
+      
+      <div>
+        <h1>Who We Are</h1>
+        <p class="muted">Unnati: The Knowledge Hub For Civil Aspirants is a not-for-profit organisation registered under the government of India. We aim to provide free guidance to talented UPSC aspirants who lack adequate resources.</p>
+        <p>Founded on December 18, 2016, Unnati connects students with Members of Parliament, Civil Services officers, and professors to guide them toward a better path. We believe that theoretical knowledge alone is not enough, which is why we organize events, seminars, and internship opportunities to provide holistic exposure.</p>
+        
+        <div class="section">
+           <h2>Our Journey</h2>
+           <div class="card">
+             <p class="muted">"Alone we can do so little, together we can do so much."</p>
+             <p>Unnati was started by <strong>Mr. Lokesh Chugh</strong> under the able guidance of <strong>Mr. Oscar Fernandes</strong> (MP, Rajya Sabha and Chief Patron, Unnati). Over the years, we have grown from a small initiative into a family that stands together through thick and thin. We celebrate our foundation day every December 18th, marking years of molding the youth into responsible citizens and assets for the nation.</p>
+           </div>
+        </div>
 
-.achievement-grid {
-    grid-template-columns: 1fr 1fr;
-}
+        <div class="section">
+          <h2>Leadership</h2>
+          <div class="grid">
+            <div class="card">
+                <div class="team-avatar">LC</div>
+                <h3>Mr. Lokesh Chugh</h3>
+                <p class="muted">Founder & Chairman</p>
+            </div>
+            <div class="card">
+                <div class="team-avatar">OF</div>
+                <h3>Mr. Oscar Fernandes</h3>
+                <p class="muted">Chief Patron<br>MP, Rajya Sabha</p>
+            </div>
+            <div class="card">
+                <div class="team-avatar">PP</div>
+                <h3>Mr. P. L. Punia</h3>
+                <p class="muted">Chief Patron<br>MP, Rajya Sabha</p>
+            </div>
+             <div class="card">
+                <div class="team-avatar">JG</div>
+                <h3>Ms. Jyoti Gupta</h3>
+                <p class="muted">President</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section">
+            <h2>Our Achievements</h2>
+            <div class="grid achievement-grid">
+                <div class="card">
+                    <h3>International Recognition</h3>
+                    <p class="muted">Received a Letter of Appreciation from the Republic of Lebanon. His Excellency Mr. Rabie Narsh (Ambassador) honored Unnati for our service to society.</p>
+                </div>
+                <div class="card">
+                    <h3>Conquering Heights</h3>
+                    <p class="muted">Team member Nitish Singh successfully conquered Mt. Stok Kangri and hoisted Unnati's flag at the peak, symbolizing our audacity and courage.</p>
+                </div>
+                <div class="card">
+                    <h3>Civil Services Seminars</h3>
+                    <p class="muted">Conducted interactive sessions at Hansraj College with experienced officers like Jatin Narval, Dr. Sudhir, and Amitabh Khare to guide aspirants.</p>
+                </div>
+                <div class="card">
+                    <h3>Model United Nations</h3>
+                    <p class="muted">Organized MUNs in various schools (e.g., Evergreen Public School) to inculcate debate culture, with over 450 delegates discussing sustainable development.</p>
+                </div>
+            </div>
+        </div>
+      </div>
 
-@media (max-width: 600px) {
-    .achievement-grid {
-        grid-template-columns: 1fr;
-    }
-}
+      <aside>
+        <div class="card">
+          <h3>Contact Us</h3>
+          <p class="muted">Want to know more about our history or get involved?</p>
+          <form action="/api/contact" method="POST">
+             <label style="font-size:13px; display:block; margin-bottom:6px;">Name</label>
+             <input type="text" name="fullName" style="width:100%; padding:8px; margin-bottom:8px; border-radius:6px; border:1px solid #e6f0fb;" required>
+             
+             <label style="font-size:13px; display:block; margin-bottom:6px;">Email</label>
+             <input type="email" name="email" style="width:100%; padding:8px; margin-bottom:8px; border-radius:6px; border:1px solid #e6f0fb;" required>
 
-/* --- Scrolling Marquee Styles --- */
+             <button class="btn" type="submit" style="margin-top:8px; width:100%; border:none; cursor:pointer;">Send Message</button>
+          </form>
+        </div>
 
-/* The fixed-height window that hides overflow */
-.marquee-window {
-    height: 350px; /* Adjust height as preferred */
-    overflow: hidden;
-    position: relative;
-    background: #f8fbfe; /* Slightly different background for contrast */
-    border-radius: 8px;
-    padding: 12px;
-    border: 1px solid #eef6ff;
-}
+        <div style="height:24px"></div>
 
-/* The container actually moving */
-.marquee-content {
-    /* Animation: name | duration | timing-function | iteration-count */
-    animation: scrollUp 60s linear infinite;
-}
+        <div class="card">
+            <h3>Patrons & Associates</h3>
+            <p class="muted" style="font-size:13px; margin-bottom:12px;">Honored by the support of distinguished personalities.</p>
+            
+            <div class="marquee-window">
+                <div class="marquee-content">
+                    <div class="patron-item"><strong>Dr. Sudheer</strong><small>IPS Officer</small></div>
+                    <div class="patron-item"><strong>Dr. Shashi Tharoor</strong><small>MP, Lok Sabha</small></div>
+                    <div class="patron-item"><strong>Lt. Smt. Shiela Dixit</strong><small>Former CM, Delhi</small></div>
+                    <div class="patron-item"><strong>His Excellency Rabie Narsh</strong><small>Ambassador, Republic of Lebanon</small></div>
+                    <div class="patron-item"><strong>Mr. Salman Khurshid</strong><small>Former Minister of External Affairs</small></div>
+                    <div class="patron-item"><strong>Mr. Rajdeep Sardesai</strong><small>Indian News Anchor</small></div>
+                    <div class="patron-item"><strong>Mr. Randeep Surjewala</strong><small>MLA & Former Minister, Haryana</small></div>
+                    <div class="patron-item"><strong>Ms. Sushmita Dev</strong><small>Former MP, Lok Sabha</small></div>
+                    <div class="patron-item"><strong>Mr. P. C. Chacko</strong><small>Former MP, Lok Sabha</small></div>
+                    <div class="patron-item"><strong>Mr. Deepender Singh Hooda</strong><small>Former MP, Lok Sabha</small></div>
+                    <div class="patron-item"><strong>IAS Amitabh Khare</strong><small>Ministry of Railways</small></div>
+                    <div class="patron-item"><strong>Dr. Rama Sharma</strong><small>Principal, Hansraj College, DU</small></div>
+                    <div class="patron-item"><strong>Dr. I.S. Bakhshi</strong><small>Principal, Dayal Singh College, DU</small></div>
+                    <div class="patron-item"><strong>Dr. Aditya Tomar</strong><small>HoD, Amity Law School</small></div>
+                    <div class="patron-item"><strong>Ms. Yogita Bhayana</strong><small>Women & Child Right Activist</small></div>
+                    <div class="patron-item"><strong>Ms. Sharmistha Mukherjee</strong><small>Indian Kathak Dancer</small></div>
+                    <div class="patron-item"><strong>Mr. Pawan Khera</strong><small>Spokesperson, INC</small></div>
+                    <div class="patron-item"><strong>Mr. Sanil Sachar</strong><small>Motivational Speaker</small></div>
+                    <div class="patron-item"><strong>Mr. Jai Parkash Aggarwal</strong><small>Former MP, Lok Sabha</small></div>
+                    <div class="patron-item"><strong>Mr. Harsh Beniwal</strong><small>YouTuber & Actor</small></div>
+                    <div class="patron-item"><strong>Mr. Amit Bhadana</strong><small>YouTuber</small></div>
+                    <div class="patron-item"><strong>Mr. Harshdeep Ahuja</strong><small>Comedian & YouTuber</small></div>
+                    <div class="patron-item"><strong>Mr. Raman Besil</strong><small>Founder, Langda Aam Production</small></div>
+                    <div class="patron-item"><strong>Mr. Mahabali Satpal</strong><small>Wrestling Coach</small></div>
+                    <div class="patron-item"><strong>Mr. Mukesh Singh Gehlot</strong><small>Bodybuilder & Powerlifter</small></div>
+                    <div class="patron-item"><strong>Mr. Virender Malhan</strong><small>Mr. World Title Holder</small></div>
+                    <div class="patron-item"><strong>Mr. Jitender Yadav</strong><small>Mr. India Title Holder</small></div>
+                    <div class="patron-item"><strong>Ms. Vidhi Malla</strong><small>Consultant & Entrepreneur</small></div>
+                    <div class="patron-item"><strong>Dr. Manish Kapoor</strong><small>Astrologer & Political Critic</small></div>
+                    <div class="patron-item"><strong>Shri Ajay ji</strong><small>Astrologer</small></div>
+                    <div class="patron-item"><strong>Mr. K John</strong><small>Singer</small></div>
+                    <div class="patron-item"><strong>Dr. Sudheer</strong><small>IPS Officer</small></div>
+                    <div class="patron-item"><strong>Dr. Shashi Tharoor</strong><small>MP, Lok Sabha</small></div>
+                    <div class="patron-item"><strong>Lt. Smt. Shiela Dixit</strong><small>Former CM, Delhi</small></div>
+                    <div class="patron-item"><strong>His Excellency Rabie Narsh</strong><small>Ambassador, Republic of Lebanon</small></div>
+                    <div class="patron-item"><strong>Mr. Salman Khurshid</strong><small>Former Minister of External Affairs</small></div>
+                    <div class="patron-item"><strong>Mr. Rajdeep Sardesai</strong><small>Indian News Anchor</small></div>
+                    <div class="patron-item"><strong>Mr. Randeep Surjewala</strong><small>MLA & Former Minister, Haryana</small></div>
+                    <div class="patron-item"><strong>Ms. Sushmita Dev</strong><small>Former MP, Lok Sabha</small></div>
+                    <div class="patron-item"><strong>Mr. P. C. Chacko</strong><small>Former MP, Lok Sabha</small></div>
+                    <div class="patron-item"><strong>Mr. Deepender Singh Hooda</strong><small>Former MP, Lok Sabha</small></div>
+                    <div class="patron-item"><strong>IAS Amitabh Khare</strong><small>Ministry of Railways</small></div>
+                    <div class="patron-item"><strong>Dr. Rama Sharma</strong><small>Principal, Hansraj College, DU</small></div>
+                    <div class="patron-item"><strong>Dr. I.S. Bakhshi</strong><small>Principal, Dayal Singh College, DU</small></div>
+                    <div class="patron-item"><strong>Dr. Aditya Tomar</strong><small>HoD, Amity Law School</small></div>
+                    <div class="patron-item"><strong>Ms. Yogita Bhayana</strong><small>Women & Child Right Activist</small></div>
+                    <div class="patron-item"><strong>Ms. Sharmistha Mukherjee</strong><small>Indian Kathak Dancer</small></div>
+                    <div class="patron-item"><strong>Mr. Pawan Khera</strong><small>Spokesperson, INC</small></div>
+                    <div class="patron-item"><strong>Mr. Sanil Sachar</strong><small>Motivational Speaker</small></div>
+                    <div class="patron-item"><strong>Mr. Jai Parkash Aggarwal</strong><small>Former MP, Lok Sabha</small></div>
+                    <div class="patron-item"><strong>Mr. Harsh Beniwal</strong><small>YouTuber & Actor</small></div>
+                    <div class="patron-item"><strong>Mr. Amit Bhadana</strong><small>YouTuber</small></div>
+                    <div class="patron-item"><strong>Mr. Harshdeep Ahuja</strong><small>Comedian & YouTuber</small></div>
+                    <div class="patron-item"><strong>Mr. Raman Besil</strong><small>Founder, Langda Aam Production</small></div>
+                    <div class="patron-item"><strong>Mr. Mahabali Satpal</strong><small>Wrestling Coach</small></div>
+                    <div class="patron-item"><strong>Mr. Mukesh Singh Gehlot</strong><small>Bodybuilder & Powerlifter</small></div>
+                    <div class="patron-item"><strong>Mr. Virender Malhan</strong><small>Mr. World Title Holder</small></div>
+                    <div class="patron-item"><strong>Mr. Jitender Yadav</strong><small>Mr. India Title Holder</small></div>
+                    <div class="patron-item"><strong>Ms. Vidhi Malla</strong><small>Consultant & Entrepreneur</small></div>
+                    <div class="patron-item"><strong>Dr. Manish Kapoor</strong><small>Astrologer & Political Critic</small></div>
+                    <div class="patron-item"><strong>Shri Ajay ji</strong><small>Astrologer</small></div>
+                    <div class="patron-item"><strong>Mr. K John</strong><small>Singer</small></div>
+                </div>
+            </div>
 
-/* Pause animation on hover for better readability */
-.marquee-window:hover .marquee-content {
-    animation-play-state: paused;
-}
+        </div>
+      </aside>
 
-/* Styling individual patron items in the list */
-.patron-item {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e6f0fb;
-}
+    </section>
+  </main>
 
-.patron-item:last-child {
-    border-bottom: none;
-}
-
-.patron-item strong {
-    display: block;
-    font-size: 14px;
-    color: var(--dark);
-}
-
-.patron-item small {
-    color: #4b6b88; /* Muted color */
-    font-size: 12px;
-}
-
-/* The animation definition */
-@keyframes scrollUp {
-    0% {
-        transform: translateY(0%);
-    }
-    100% {
-        /* Move up by exactly 50% because the list is duplicated. 
-           This creates a seamless loop. */
-        transform: translateY(-50%);
-    }
-}
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>
+          <strong>Unnati</strong>
+          <div style="font-size:13px">Registered Not-for-Profit • Founded 2016</div>
+        </div>
+        <div style="font-size:14px">Follow us • <a href="#" style="color:#e6f2ff">Twitter</a> • <a href="#" style="color:#e6f2ff">Instagram</a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
