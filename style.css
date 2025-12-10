@@ -331,3 +331,126 @@ footer {
   from { opacity: 0; transform: scale(0.8); }
   to { opacity: 1; transform: scale(1); }
 }
+
+/* --- Join Us Page Styles --- */
+
+/* Wrapper for the Join Us content */
+.join-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+/* Centered Hero Text */
+.join-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.join-hero h1 {
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.join-hero p {
+    font-size: 1.15rem;
+    color: #4b6b88; /* Matches your 'muted' color */
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* The Program Card (Full Width) */
+.program-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(11, 37, 64, 0.08); /* Matches your theme shadow */
+    border: 1px solid #eef6ff;
+}
+
+.card-header {
+    background-color: #d68a32; /* Orange/Gold accent */
+    padding: 30px 40px;
+    color: white;
+}
+
+.card-header h2 {
+    margin: 0 0 6px 0;
+    font-size: 24px;
+}
+
+.card-header p {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.95;
+}
+
+.card-body {
+    padding: 40px;
+}
+
+.section-title {
+    color: var(--dark);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eef6ff;
+    padding-bottom: 10px;
+    display: inline-block; /* Makes border only as wide as text */
+    width: 100%;
+}
+
+.description-text {
+    color: #4b6b88; /* Muted color */
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 36px;
+}
+
+/* Benefits Grid - 3 Columns */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 36px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--dark);
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #f8fbfe; /* Light background matching your theme */
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #eef6ff;
+}
+
+.benefit-item i {
+    color: #3d8a40; /* Green check */
+    font-size: 18px;
+}
+
+.bottom-header {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+/* Responsive adjustments for Join Page */
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr; /* Stack vertically on mobile */
+    }
+    .card-header, .card-body {
+        padding: 24px;
+    }
+    .join-hero h1 {
+        font-size: 2rem;
+    }
+}
