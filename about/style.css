@@ -26,7 +26,6 @@ header {
   margin: 0 auto;
   padding: 24px;
 }
-/* --- Extra Styles for About Page --- */
 
 nav {
   display: flex;
@@ -41,14 +40,8 @@ nav {
 }
 
 .logo {
-.team-avatar {
-  width: 60px;
-  height: 60px;
-  background: #eef6ff;
-  border-radius: 50%;
-  margin-bottom: 12px;
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -101,51 +94,31 @@ align-items: center;
 
 h2 {
   margin: 0 0 12px;
-  justify-content: center;
-  font-weight: bold;
-  color: var(--blue);
-  font-size: 20px;
 }
 
 h3 {
   margin: 0 0 8px;
   font-size: 18px;
-.achievement-grid {
-    grid-template-columns: 1fr 1fr;
 }
 
 .branches ul {
   list-style: none;
   padding: 0;
   margin: 0;
-@media (max-width: 600px) {
-    .achievement-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 .branches li {
   padding: 8px 0;
   border-bottom: 1px solid #eef6ff;
 }
-/* --- Scrolling Marquee Styles --- */
 
 footer {
   background: #0c3358;
   color: #e6f2ff;
   padding: 26px 24px;
-/* The fixed-height window that hides overflow */
-.marquee-window {
-    height: 350px; /* Adjust height as preferred */
-    overflow: hidden;
-    position: relative;
-    background: #f8fbfe; /* Slightly different background for contrast */
-    border-radius: 8px;
-    padding: 12px;
-    border: 1px solid #eef6ff;
 }
 
-
+/* responsive */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
@@ -153,12 +126,9 @@ footer {
   .grid {
     grid-template-columns: repeat(1, 1fr);
   }
-/* The container actually moving */
-.marquee-content {
-    /* Animation: name | duration | timing-function | iteration-count */
-    animation: scrollUp 60s linear infinite;
 }
 
+/* simple button */
 .btn {
   display: inline-block;
   background: var(--blue);
@@ -167,21 +137,13 @@ footer {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-/* Pause animation on hover for better readability */
-.marquee-window:hover .marquee-content {
-    animation-play-state: paused;
 }
 
 .muted {
   color: #4b6b88;
-/* Styling individual patron items in the list */
-.patron-item {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e6f0fb;
 }
 
-
+/* --- Extra Styles for About Page --- */
 
 .team-avatar {
   width: 60px;
@@ -195,41 +157,14 @@ footer {
   font-weight: bold;
   color: var(--blue);
   font-size: 20px;
-.patron-item:last-child {
-    border-bottom: none;
 }
 
 .achievement-grid {
     grid-template-columns: 1fr 1fr;
-.patron-item strong {
-    display: block;
-    font-size: 14px;
-    color: var(--dark);
-}
-
-.patrons-grid {
-    grid-template-columns: repeat(4, 1fr);
-.patron-item small {
-    color: #4b6b88; /* Muted color */
-    font-size: 12px;
-}
-
-@media (max-width: 1000px) {
-    .patrons-grid {
-        grid-template-columns: repeat(2, 1fr);
-/* The animation definition */
-@keyframes scrollUp {
-    0% {
-        transform: translateY(0%);
-}
 }
 
 @media (max-width: 600px) {
-    .patrons-grid {
+    .achievement-grid {
         grid-template-columns: 1fr;
-    100% {
-        /* Move up by exactly 50% because the list is duplicated. 
-           This creates a seamless loop. */
-        transform: translateY(-50%);
-}
+    }
 }
