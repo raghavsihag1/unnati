@@ -1,0 +1,187 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9; /* Light grey/blue background */
+    color: #333;
+}
+
+/* --- Navbar Styles --- */
+.navbar {
+    background-color: #2c62b5; /* Royal Blue */
+    color: white;
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.brand-tagline {
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.btn-join {
+    background-color: #1e4b94;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-join:hover {
+    background-color: #163a75;
+}
+
+/* --- Main Layout Styles --- */
+.main-wrapper {
+    padding: 60px 20px;
+    min-height: 80vh; /* Ensures it takes up space */
+}
+
+.content-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex; /* This puts them side by side */
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns top of items */
+    gap: 50px; /* Space between the text and the card */
+}
+
+/* Left Column (Hero Text) */
+.left-column {
+    flex: 1; /* Takes up remaining space */
+    padding-top: 40px; /* Aligns slightly lower visually */
+}
+
+.left-column h1 {
+    font-size: 2.5rem;
+    color: #1a2b49;
+    margin-bottom: 20px;
+}
+
+.left-column .subtitle {
+    font-size: 1.2rem;
+    color: #556070;
+    line-height: 1.6;
+}
+
+/* Right Column (The Card) */
+.right-column {
+    flex: 0 0 400px; /* Fixed width for the card, prevents shrinking */
+}
+
+.info-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card-header {
+    background-color: #d68932; /* Orange/Gold color */
+    color: white;
+    padding: 30px;
+}
+
+.card-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.card-header p {
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-body h3 {
+    color: #0f1e38;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.card-body p {
+    color: #5a6b80;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* Benefits Grid (Two Columns within the card) */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #1a2b49;
+}
+
+.benefit-item i {
+    color: #4CAF50; /* Green checkmark */
+    margin-top: 3px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 850px) {
+    .content-container {
+        flex-direction: column; /* Stacks them on mobile */
+    }
+    
+    .right-column {
+        width: 100%; /* Card becomes full width */
+        flex: none;
+    }
+}
