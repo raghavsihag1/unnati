@@ -14,7 +14,67 @@ body {
   color: var(--dark);
   background: var(--light);
 }
+/* --- Popup Modal Styles --- */
 
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 9999; /* Ensure it sits on top of everything */
+}
+
+.popup-content {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative; /* Needed to position the X button inside */
+  max-width: 90%; /* Responsive width */
+  max-height: 90vh;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  animation: popIn 0.3s ease-out; /* Smooth entry animation */
+}
+
+.popup-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* The X Close Button */
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: var(--blue); /* Uses your site's blue color */
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border: 2px solid white;
+}
+
+.close-btn:hover {
+  background: var(--dark);
+}
+
+/* Animation Keyframes */
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
 /* --- Layout & Header --- */
 
 header {
