@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Join Us | Unnati</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Specific styles for the 2-column layout on this page */
+    .join-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr; /* Left side slightly wider */
+        gap: 24px;
+        align-items: start;
+    }
+    
+    @media (max-width: 900px) {
+        .join-grid {
+            grid-template-columns: 1fr; /* Stack on mobile */
+        }
+    }
+
+    /* Checkmark list styling */
+    .benefit-list {
+        list-style: none;
+        padding: 0;
+        margin: 16px 0;
+    }
+    .benefit-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .check-icon {
+        color: green;
+        font-weight: bold;
+    }
+    
+    /* Highlight box for "Who Should Apply" */
+    .highlight-box {
+        background: var(--blue);
+        color: white;
+        padding: 18px;
+        border-radius: 8px;
+        margin-top: 24px;
+    }
+    .highlight-box li {
+        margin-bottom: 8px;
+    }
+    .highlight-box span {
+        color: #ffd700; /* Gold bullet points */
+        font-weight: bold;
+        margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="nav-left">
+          <div class="logo">
+            <img src="logo.png" alt="Unnati Logo" width="44" height="44">
+            <div>
+              <div style="font-weight:700">Unnati Foundation</div>
+              <small style="font-size:12px;color:rgba(255,255,255,0.9)">The knowledge hub for civil aspirants.</small>
+            </div>
+          </div>
+          <div class="nav-links" style="margin-left:26px">
+            <a href="index.html">Home</a>
+            <a href="#articles">Articles</a>
+            <a href="about.html">About</a>
+             <a href="#branches">Branches</a>
+            <a href="events.html">Events</a>
+             <a href="#upcoming">Upcoming</a>
+          </div>
+        </div>
+        <div>
+          <a class="btn" href="join.html">Join</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" style="padding-bottom:10px;">
+      <div style="text-align:center; max-width:800px; margin:0 auto 40px auto;">
+        <h1 style="font-size:36px;">Join Unnati</h1>
+        <p class="muted" style="font-size:18px;">Be part of a movement that's empowering the next generation of civil servants.</p>
+      </div>
+
+      <div class="join-grid">
+        
+        <div class="card">
+            <div style="background:linear-gradient(90deg, #f59e0b, #d97706); margin:-18px -18px 18px -18px; padding:24px; border-radius:10px 10px 0 0; color:white;">
+                <h2 style="margin:0; font-size:24px;">Unnati on Campus</h2>
+                <p style="margin:4px 0 0 0; opacity:0.9;">Internship Program for College Students</p>
+            </div>
+
+            <h3 style="margin-top:24px;">About the Program</h3>
+            <p class="muted">Unnati on Campus is our flagship internship program designed to provide college students with practical exposure to NGO operations, work culture learning, and skill development opportunities. It is perfect for students who want to make a difference while gaining valuable professional experience.</p>
+
+            <h3 style="margin-top:24px;">Program Benefits</h3>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+                <ul class="benefit-list">
+                    <li><span class="check-icon">✓</span> Practical NGO exposure</li>
+                    <li><span class="check-icon">✓</span> Work culture learning</li>
+                    <li><span class="check-icon">✓</span> Leadership skills</li>
+                </ul>
+                <ul class="benefit-list">
+                    <li><span class="check-icon">✓</span> Certificate of completion</li>
+                    <li><span class="check-icon">✓</span> Networking with aspirants</li>
+                    <li><span class="check-icon">✓</span> Professional mentorship</li>
+                </ul>
+            </div>
+
+            <h3 style="margin-top:12px;">Opportunities Available</h3>
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap:12px; margin-top:12px;">
+                <div style="background:#f8fbfe; padding:12px; border-radius:6px; border:1px solid #eef6ff; text-align:center;">
+                    <strong style="color:var(--blue)">Content Writing</strong>
+                    <p class="muted" style="font-size:12px; margin-top:4px;">Create impactful content</p>
+                </div>
+                <div style="background:#f8fbfe; padding:12px; border-radius:6px; border:1px solid #eef6ff; text-align:center;">
+                    <strong style="color:var(--blue)">Event Mgmt</strong>
+                    <p class="muted" style="font-size:12px; margin-top:4px;">Organize programs</p>
+                </div>
+                <div style="background:#f8fbfe; padding:12px; border-radius:6px; border:1px solid #eef6ff; text-align:center;">
+                    <strong style="color:var(--blue)">Social Media</strong>
+                    <p class="muted" style="font-size:12px; margin-top:4px;">Manage digital presence</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3 style="color:white; margin-top:0;">Who Should Apply?</h3>
+                <ul style="list-style:none; padding:0; margin:0; font-size:14px;">
+                    <li><span>•</span> College students from any discipline</li>
+                    <li><span>•</span> Passionate about social work & youth empowerment</li>
+                    <li><span>•</span> Looking for practical work experience</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Apply Now</h3>
+            <p class="muted" style="font-size:14px; margin-bottom:18px;">Fill in your details to join the program.</p>
+            
+            <form action="/api/join" method="POST" class="join-form">
+                
+                <div class="form-group">
+                    <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px;">Full Name</label>
+                    <input type="text" name="fullName" placeholder="John Doe" required 
+                           style="width:100%; padding:10px; border:1px solid #e6f0fb; border-radius:6px; margin-bottom:16px;">
+                </div>
+
+                <div class="form-group">
+                    <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px;">Email Address</label>
+                    <input type="email" name="email" placeholder="you@example.com" required 
+                           style="width:100%; padding:10px; border:1px solid #e6f0fb; border-radius:6px; margin-bottom:16px;">
+                </div>
+
+                <div class="form-group">
+                    <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px;">Phone Number</label>
+                    <input type="tel" name="phone" placeholder="+91 98765 43210" required 
+                           style="width:100%; padding:10px; border:1px solid #e6f0fb; border-radius:6px; margin-bottom:16px;">
+                </div>
+
+                <div class="form-group">
+                    <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px;">Role of Interest</label>
+                    <select name="role" style="width:100%; padding:10px; border:1px solid #e6f0fb; border-radius:6px; margin-bottom:16px;">
+                        <option value="content_writing">Content Writing</option>
+                        <option value="event_management">Event Management</option>
+                        <option value="social_media">Social Media</option>
+                        <option value="campus_ambassador">Campus Ambassador</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px;">Why do you want to join?</label>
+                    <textarea name="message" placeholder="Tell us about yourself..." rows="4" 
+                              style="width:100%; padding:10px; border:1px solid #e6f0fb; border-radius:6px; margin-bottom:16px; font-family:inherit;"></textarea>
+                </div>
+
+                <button class="btn" type="submit" style="width:100%; border:none; cursor:pointer; padding:12px;">Submit Application</button>
+            </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>
+          <strong>Unnati</strong>
+          <div style="font-size:13px">Registered Not-for-Profit • Founded 2016</div>
+        </div>
+        <div style="font-size:14px">Follow us • <a href="#" style="color:#e6f2ff">Twitter</a> • <a href="#" style="color:#e6f2ff">Instagram</a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
