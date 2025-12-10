@@ -20,8 +20,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
   display: flex;
   justify-content: center; /* Center horizontally */
@@ -33,11 +33,16 @@ body {
   background: white;
   padding: 10px;
   border-radius: 8px;
-  position: relative; /* Needed to position the X button inside */
-  max-width: 90%; /* Responsive width */
-  max-height: 90vh;
+  position: relative;
+  
+  /* --- SIZE CONTROLS --- */
+  width: 600px;         /* 1. specific width for desktops */
+  max-width: 90%;       /* 2. shrinks automatically on mobile */
+  max-height: 90vh;     /* 3. ensures it never gets taller than the screen */
+  overflow: auto;       /* 4. adds scroll if image is too tall */
+  
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  animation: popIn 0.3s ease-out; /* Smooth entry animation */
+  animation: popIn 0.3s ease-out;
 }
 
 .popup-img {
