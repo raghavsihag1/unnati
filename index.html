@@ -7,6 +7,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="popup-overlay" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <img src="uyp.jpg" alt="Announcement" class="popup-img">
+  </div>
+</div>
+
+<script>
+  function closePopup() {
+    document.getElementById("popup-overlay").style.display = "none";
+  }
+</script>
   <header>
     <div class="container">
       <nav>
